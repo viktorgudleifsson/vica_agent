@@ -6,15 +6,18 @@ source ./config/swebench.env
 
 folder="$SWEBENCH_FOLDER"
 
-mkdir swebench-lite
-cd swebench-lite
+mkdir $folder
+cd $folder
 
-python3 -m venv .venv_swe > ./creating_venv.log
+echo "Creating venv!"
+python3 -m venv .venv_swe > ./creating_venv.log 2>&1
 source .venv_swe/bin/activate
 
+echo "Installing mini-swe-agent"
 pip install --upgrade pip
 pip install mini-swe-agent
 
+echo "Fetching files!"
 curl -L https://raw.githubusercontent.com/viktorgudleifsson/vica_agent/main/swebench.yaml -o swebench.yaml
 curl -L https://raw.githubusercontent.com/viktorgudleifsson/vica_agent/main/swebench.yaml -o run_swebench.sh
 
