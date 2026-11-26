@@ -4,7 +4,7 @@ curl -L https://raw.githubusercontent.com/viktorgudleifsson/vica_agent/main/conf
 
 source ./config/swebench.env
 
-folder="$SWEBENCH_FOLDER"
+folder=$SWEBENCH_FOLDER
 
 mkdir $folder
 cd $folder
