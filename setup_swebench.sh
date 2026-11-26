@@ -7,7 +7,10 @@ source ./config/swebench.env
 folder=$SWEBENCH_FOLDER
 
 mkdir $folder
+mv config $folder/config
 cd $folder
+
+
 
 echo "Creating venv!"
 python3 -m venv $SWEBENCH_VENV_NAME > ./setup.log 2>&1
