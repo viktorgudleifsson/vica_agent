@@ -180,6 +180,6 @@ model:
     {%- endif %}
   model_name: $MODEL_PROVIDER/$MODEL_NAME
   model_kwargs:
-    api_base: $MODEL_BASE_URL
-    api_key: $MODEL_API_KEY
+    api_base: "http://localhost:8000/v1"
+    api_key: "EMPTY"
     tool_choice: "required"
