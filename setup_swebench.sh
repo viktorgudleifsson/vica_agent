@@ -1,4 +1,6 @@
 #!/bin/bash
+mkdir config
+curl -L https://raw.githubusercontent.com/viktorgudleifsson/vica_agent/main/config/swebench.env -o config/swebench.env
 
 source ./config/swebench.env
 
