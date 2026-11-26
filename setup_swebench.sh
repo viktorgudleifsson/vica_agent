@@ -10,12 +10,12 @@ mkdir $folder
 cd $folder
 
 echo "Creating venv!"
-python3 -m venv .venv_swe > ./creating_venv.log 2>&1
+python3 -m venv .venv_swe > ./setup.log 2>&1
 source .venv_swe/bin/activate
 
 echo "Installing mini-swe-agent"
-pip install --upgrade pip
-pip install mini-swe-agent
+pip install --upgrade pip > ./setup.log 2>&1
+pip install mini-swe-agent > ./setup.log 2>&1
 
 echo "Fetching files!"
 curl -L https://raw.githubusercontent.com/viktorgudleifsson/vica_agent/main/swebench.yaml -o swebench.yaml
