@@ -5,7 +5,7 @@ source ./config/swebench.env
 
 mini-extra swebench \
     --config ./swebench.yaml \
-    --model "${MODEL_PROVIDER}/${MODEL_NAME}" \
+    --model "$MODEL_PROVIDER/$MODEL_NAME" \
     --workers 1 \
     --slice 0:1 \
     --shuffle \
